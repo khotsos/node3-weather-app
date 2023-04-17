@@ -9,7 +9,7 @@ const weather = (longitude, latitude, callback) => {
         const { weather_descriptions: outlook, temperature, precip: precipitation, feelslike, error: responseError } = response.body.current
 
         if (error) {
-            callback('Cannot connect to the WEATHER SERVICES', undefined)
+            callback('Cannot connect to the WEATHER SERVICES, Please check you internet connection', undefined)
         } else if (responseError) {
             callback('CANNOT CONNECT TO THE SERVER', undefined)
         } else {
